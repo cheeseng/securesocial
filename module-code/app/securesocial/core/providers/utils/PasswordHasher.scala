@@ -77,7 +77,8 @@ class BCryptPasswordHasher(app: Application) extends PasswordHasher {
    */
   def hash(plainPassword: String): PasswordInfo = {
     val logRounds = app.configuration.getInt(RoundsProperty).getOrElse(DefaultRounds)
-    PasswordInfo(id, BCrypt.hashpw(plainPassword, BCrypt.gensalt(logRounds)))
+    val salt = BCrypt.gensalt(logRounds)
+    PasswordInfo(id, BCrypt.hashpw(plainPassword, salt), Some(salt))
   }
 
   /**

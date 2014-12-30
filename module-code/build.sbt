@@ -2,7 +2,7 @@ import play.Project._
 
 name := "SecureSocial"
 
-version := "2.1.4"
+version := "1.0.0-SNAPSHOT"
 
 libraryDependencies ++= Seq(
   cache,
@@ -15,9 +15,9 @@ resolvers ++= Seq(
   Resolver.typesafeRepo("releases")
 )
 
-organization := "ws.securesocial"
+organization := "com.amaseng"
 
-organizationName := "SecureSocial"
+organizationName := "AmaSeng"
 
 organizationHomepage := Some(new URL("http://www.securesocial.ws")) 
 
