@@ -17,9 +17,9 @@ resolvers ++= Seq(
   Resolver.typesafeRepo("releases")
 )
 
-organization := "ws.securesocial"
+organization := "com.amaseng"
 
-organizationName := "SecureSocial"
+organizationName := "AmaSeng"
 
 organizationHomepage := Some(new URL("http://www.securesocial.ws"))
 

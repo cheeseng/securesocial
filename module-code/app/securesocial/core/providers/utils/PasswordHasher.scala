@@ -78,7 +78,8 @@ object PasswordHasher {
      * @return a PasswordInfo containing the hashed password.
      */
     def hash(plainPassword: String): PasswordInfo = {
-      PasswordInfo(id, BCrypt.hashpw(plainPassword, BCrypt.gensalt(logRounds)))
+      val salt = BCrypt.gensalt(logRounds)
+      PasswordInfo(id, BCrypt.hashpw(plainPassword, salt), Some(salt))
     }
 
     /**
